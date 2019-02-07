@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+h1, h2, h3, h4, blockquote, q, .maia-nav ul {
+   font-family: 'open sans',arial,sans-serif;
+}
+
+h1{
+  text-align: center;
+}
+
+p{
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+#list{
+  display: inline-flex;
+  align-self: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  opacity: 1;
+}
+
+.catBreed{
+  width: calc(33% - 50px);
+  margin: 20px;
+  padding: 5px;
+
+  border-radius: 5px;
+  background-color: #fcf9f7;
+}
+
+.catBreed:hover{
+  background-color: #e8e1dc;
+}
+
+.border-button {
+  padding: 0 0 20px 0;
+
+  transition: border-width 0.6s linear;
+
+  border-bottom: solid 5px #e8e1dc;
+}
+
+.border-button:hover { border-width: 10px; }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+
+body {
+  font-family: 'Source Code Pro', sans-serif;
+}
+
+.wrap {
+  padding: 10% 20%;
+}
+
+h2 {
+  margin-top: 3em;
+  color: grey;
+}
+h2:first-child {
+  margin-top: 0;
+}
+
+.underlined {
+  color: black;
+  flex: 1;
+  font-size: 2em;
+  line-height: 1.2;
+  text-decoration: none;
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background .5s;
+
+.underlined--offset {
+  background-position: 0 0.2em;
+  box-shadow: inset 0 -.5em 0 0 #bfb1a4;
+}
