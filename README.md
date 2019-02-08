@@ -1,7 +1,7 @@
 # Web App from scratch ⚙️
 
 This is my repository for the Web App from scratch.
-![Frontend Data Screenshot](public/img/screenshotFrontPage)
+![Screenshot](week1/public/img/screenshotFrontPage)
 
 ## Table of Contents 🗃
 * [To do](#to-do-)
