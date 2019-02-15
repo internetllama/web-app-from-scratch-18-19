@@ -16,7 +16,7 @@ This is my repository for the Web App from scratch.
 // description of the API and how data is gathered from it.
 
 ## Actor Diagram 🐈
-![Screenshot](week1/public/img/actorDiagram)
+![Screenshot](week1/public/img/actorDiagram.png)
 
 ## Interaction Diagram 🐈
-![Screenshot](week1/public/img/InteractionDiagram)
+![Screenshot](week1/public/img/InteractionDiagram.png)
