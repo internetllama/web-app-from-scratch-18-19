@@ -1,5 +1,7 @@
 var request = new XMLHttpRequest();
 
+var apiURL = "https://api.thecatapi.com/v1/breeds";
+
 request.onload = function () {
 
 var data = JSON.parse(this.response);
@@ -16,29 +18,29 @@ var initializor = function(){
 initializor();
 
 routie({
+  //home page -> overview of all breeds
   'home': function(){
-    console.log("home");
-    element.innerHTML = data.map((item, i) => `
-      <div class="catBreed" >
-        <a href ="#catInfo?id=${item.id}">
-          <h1>${item.name}</h1>
-          <img src="./public/img/${item.id}.jpg" class="imgCat">
-          <p>${item.origin} <img src="./public/img/${item.origin}.png" class="imgFlag"></p>
-          <p>${item.temperament}</p>
-        </a>
-      </div>
-      `).join("");
+    listAllCatBreeds();
   },
+  // routing to detail pages for each specific breed
   'catInfo/?:id': function(id){
     // console.log("-------cat id", id.substring(4));
     let catId = id.substring(4);
     renderDetail(catId);
   }
-}
-);
+});
 
 function listAllCatBreeds(){
-
+  element.innerHTML = data.map((item, i) => `
+    <div class="catBreed" >
+      <a href ="#catInfo?id=${item.id}">
+        <h1>${item.name}</h1>
+        <img src="./public/img/${item.id}.jpg" class="imgCat">
+        <p>${item.origin} <img src="./public/img/${item.origin}.png" class="imgFlag"></p>
+        <p>${item.temperament}</p>
+      </a>
+    </div>
+    `).join("");
 }
 
 function renderDetail(renderId){
@@ -53,5 +55,5 @@ function renderDetail(renderId){
 }
 }
 
-request.open("GET", "https://api.thecatapi.com/v1/breeds", "true");
+request.open("GET", apiURL, "true");
 request.send();
